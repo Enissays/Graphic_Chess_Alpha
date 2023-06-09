@@ -2,7 +2,7 @@
 
 Menu::Menu(float width, float height)
 {
-    if (!font.loadFromFile("E:\\SteamLibrary\\steamapps\\common\\GarrysMod\\garrysmod\\cache\\workshop\\resource\\fonts\\gnuolanedr.ttf"));
+    if (!font.loadFromFile("C:\\Users\\yassi\\source\\repos\\Enissays\\Brouillon\\Brouillon\\images\\comic.ttf"));
     
     std::string liste[MAX_NB] = {"Jouer", "Options", "Quitter"};
     for (int i = 0;i < MAX_NB;i++)

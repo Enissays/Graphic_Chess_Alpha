@@ -81,6 +81,17 @@ int main()
                 case sf::Event::Closed:
                     window.close();
                     break;
+
+                case sf::Event::MouseButtonPressed:
+                    if (event.mouseButton.button == sf::Mouse::Left)
+                    {
+						GB.check_mouse(window);
+					}
+					break;
+
+                case sf::Event::MouseMoved:
+                    GB.drag(window);
+                    break;
                 }
             }
 

@@ -17,11 +17,15 @@ private:
 	std::vector<std::string> p_names = { "pawn" ,"rook", "knight", "bishop", "queen", "king" };
 	sf::Texture textures_white[6];
 	sf::Texture textures_black[6];
+
+	GraphicalPiece* selected_dnd;
 public:
 	GraphicalBoard();
 	~GraphicalBoard();
 
 	void update();
+	void check_mouse(sf::RenderWindow& window);
 	void draw(sf::RenderWindow& window);
+	void drag(sf::RenderWindow& window);
 };
 

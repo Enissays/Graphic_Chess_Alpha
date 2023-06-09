@@ -11,7 +11,17 @@ public:
 	~GraphicalPiece();
 	void draw(sf::RenderWindow &);
 	int getId() { return id; }
-	bool collides() { return bound.contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y);  }
+	bool collides(sf::RenderWindow &window) { 
+		int mx = sf::Mouse::getPosition(window).x;
+		int my = sf::Mouse::getPosition(window).y;
+		sf::Vector2f points;
+		points.x = float(mx);
+		points.y = float(my);
+		return bound.contains(points);
+	}
+	void move(int x, int y) { sprite.setPosition(x, y); }
+	int getX() { return x; }
+	int getY() { return y; }
 
 private:
 	int x;
