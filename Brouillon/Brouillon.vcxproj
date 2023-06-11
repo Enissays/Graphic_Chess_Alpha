@@ -145,15 +145,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="GraphicalBoard.cpp" />
     <ClCompile Include="GraphicalPiece.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Piece.cpp" />
+    <ClCompile Include="Piece_moves.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Board.h" />
     <ClInclude Include="GraphicalBoard.h" />
     <ClInclude Include="GraphicalPiece.h" />
-    <ClInclude Include="PieceTextures.h" />
+    <ClInclude Include="Piece.h" />
     <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>

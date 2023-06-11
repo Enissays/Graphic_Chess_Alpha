@@ -6,7 +6,7 @@
 class GraphicalPiece
 {
 public:
-	GraphicalPiece();
+	GraphicalPiece(int px, int py, int id, sf::Texture);
 	GraphicalPiece(int x, int y, int id, sf::Texture, sf::Texture);
 	~GraphicalPiece();
 	void draw(sf::RenderWindow &);
@@ -22,6 +22,8 @@ public:
 	void move(int x, int y) { sprite.setPosition(x, y); }
 	int getX() { return x; }
 	int getY() { return y; }
+
+	sf::Vector2f getPos() { return { sprite.getPosition().x, sprite.getPosition().y}; }
 
 private:
 	int x;

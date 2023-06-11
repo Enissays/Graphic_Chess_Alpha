@@ -1,8 +1,13 @@
 #include "GraphicalPiece.h"
 
-GraphicalPiece::GraphicalPiece()
+GraphicalPiece::GraphicalPiece(int px, int py, int id, sf::Texture TEXT)
 {
-
+	this->id=id;
+	texture = TEXT;
+	sprite.setTexture(texture);
+	sprite.setScale(0.20, 0.21);
+	sprite.setPosition(px, py);
+	bound = sprite.getGlobalBounds();
 }
 
 GraphicalPiece::GraphicalPiece(int x, int y, int id, sf::Texture TEXT, sf::Texture boardTexture)
